@@ -1,4 +1,4 @@
-﻿
+
 /* файл ресет http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -331,7 +331,7 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+  
 }
 
 
@@ -362,7 +362,7 @@ textarea {
 .chromeframe {
     margin: 0.2em 0;
     background: #ccc;
-    color: #000;
+  
     padding: 0.2em 0;
 }
 
@@ -440,36 +440,214 @@ textarea {
       font-size: 18px;
       line-height: normal;
       font-weight: normal;
-      color: #000;
+      --background-color: rgb(250, 244, 244);
+      --text-color: #111;
+      /* --background-color:#f1eaea;
+      --text-color:#04011f; */
   }
+
+main{
+    background: var(--background-color);
+    color: var(--text-color);
+}
+:root{
+    --dark-background-color: #111;
+      --dark-text-color: rgb(255, 255, 255);
+}
+body.theme-dark{
+    --background-color: var(--dark-background-color);
+    --text-color: var( --dark-text-color);
+}
+@media (prefers-color-scheme: dark) {
+    body.theme-auto{
+    --background-color: var(--dark-background-color);
+    --text-color: var( --dark-text-color);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* main{
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+button {
+    color: var(--text-color);
+}
+:root {
+    --dark-background-color: #111111;
+    --dark-text-color: #eeeeee;
+}
+
+body.theme-dark {
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
+}
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --background-color: var(--dark-background-color);
+        --text-color: var(--dark-text-color);
+    }
+} */
   .wrapper{
-      max-width: 1600px;
+      max-width: 1060px;
       margin: 0 auto;}
+img{
+    max-width: 100%;
+    height: auto;
+}
 
 /* Хедер*/
 .header{
+   
+    text-align: center;
+    background-image: url(../images/log.jpg);
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #020305;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-left: 20px;
+    padding-top: 100px;
+
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
 }
+
+.headerh1{color: beige;}
+
 .header_wrapper{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
+    background-color: black;
 }
 .header_logo{
-    flex-basis: 30%;
+    flex-basis: 20%;
 }
 .header_menu{
     display:  flex;
     flex-wrap: wrap;
+    color: black;
 }
 .header_item{
-    margin-right: 10px;
-    flex-basis: 14%;
+    margin-right: 30px;
+    color: beige;
+    border-width: 5px;
+    border-left-style: solid;
+    text-decoration: none;
 }
 .header_item:last-child{
     margin-right: 0;
 
 }
+.header_item:hover,.header_item:focus,.header_item:active{-moz-text-decoration-line: underline;}
+/* МЕЙН*/
+.main1{
+    padding-top: 200px;
+    max-width: 90%;
+    /* background-color:burlywood; */
+    margin-bottom: 20px;
+    
+}
+
+.htmltegs{
+    max-width: 100%;
+    background-color:rgb(139, 139, 196);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.htmlcards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 20%);
+}
+
+.cards{
+grid-column: span 1;
+margin-bottom: 10px;
+}
+
+.cardstitle{
+
+}
+.listblok{
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    
+}
+
+.footer{
+    background-color: darkkhaki;
+    padding-top: 10px;
+}
+.footeritem{
+    display: flex;
+    flex-wrap: wrap;
+   
+    align-content: space-between;
+   
+}
+.ico{
+   width: 50%;
+    
+}
+.title{
+     
+}
+
+/* для странички дс */
+.block-choice{
+     padding-top: 200px;
+    
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+  }
+  .theme{
+   
+    margin-left: auto;
+  }
+  .grid-container{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2vw;
+    justify-items: center;
+    margin-top: 20px;
+    padding-top: 200px;
+  }
+  .main-form{
+    width: 77%;
+    border: 7px solid rgb(37, 56, 143);
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 3px rgb(0,19,42);
+  }
+/* текст не копируется */
+  .noselect {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    }

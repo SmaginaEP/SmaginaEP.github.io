@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  <link rel="stylesheet" href="css/reset.css">-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"> 
+    <title>WEB-технологии</title>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header_wrapper">
+                <div class="header_logo">
+                    <a href="index.html" target="_blank"><img src="images/logo.jpg" width="100" alt="Логотип"></a>
+                </div>
+                <nav class="header_nav">
+                     <ul class="header_menu">
+                         <li class="header_item"><a href="index.html" target="_blank">О себе</a></li>
+                         <li class="header_item"><a href="pages/rezume.html" target="_blank">Резюме</a></li>
+                         <li class="header_item"><a href="pages/portfolio.html" target="_blank">Портфолио</a></li>
+                         <li class="header_item"><a href="index.html#htmltegs" target="_blank">Компетенции</a></li>
+                         <li class="header_item"><a href="pages/kontakty.html" target="_blank">Контактыaaaaaa</a></li>
+                    </ul>
+                </nav>
+             </div>
+             <h1>WEB-технологии</h1>
+        </div>
+    </header>
+    <main class="main1">
+
+    <div>
+        <div>выберите цветовую тему</div>
+        <select name="" id="theme">
+            <option value="auto">По умолчанию</option>
+            <option value="light">Светлая</option>
+            <option value="dark">Темная</option>
+        </select>
+        <script>
+            function applyTheme(theme){
+                document.body.classList.remove("theme-auto","theme-light","theme-dark");
+                document.body.classList.add(`theme-${theme}`);
+            }
+
+            document.addEventListener("DOMContentLoaded",() =>{
+                document.querySelector("#theme").addEventListener("change",function (){
+                    applyTheme(this.value);
+                });
+            });
+
+
+        </script>
+    </div>
+    <div class="grid-container">
+        <div class="main-form">
+            <form action="" method="get" id="form1" onsubmit="return checkForm(this)">
+                <div class="form-div" id="svaz">
+                  <div>Как Вам удобно получить ответ:</div>  
+                  <label for=""><input type="radio" id="posta" value="по почте">по почте</label><br>
+                  <label for=""><input type="radio"id="tel" value="по телефону">по телефону</label><br>
+                  <label for=""><input type="radio"id="nootv" value="не отвечать">не отвечать</label>
+                </div>
+                <div class="form-div">
+                    <label for="theme">Укажите тему вопроса</label>
+                    <select name="theme" id="theme" class="input-text">
+                        <option value="">работа</option>
+                        <option value="">сотрудничество</option>
+                        <option value="">личное</option>
+                    </select>
+                </div>
+                <div class="form-div">
+                    <div>И еще один вопрос?</div>  
+                  <label for="checkbox1"><input type="checkbox" name="" id="checkbox1">может так</label><br>
+                  <label for="checkbox2"><input type="checkbox" name="" id="checkbox2">или так</label><br>
+                  <label for="checkbox3"><input type="checkbox" name="" id="checkbox3">а может вот так</label>
+                </div>
+            
+            <div class="form-div">
+                <label for="name" class="flex-row">Ваше имя</label>
+                <input type="text" name="name1" id="name1" class="input-text">
+            </div>
+            
+            <div class="form-div" id="email1">
+                <label for="email" class="flex-row">Адрес почты</label>
+                <input type="email" name="email" id="email" class="input-text">
+            </div>
+            
+            <div class="form-div" id="tel1">
+                <label for="tel" class="flex-row">Телефон</label>
+                <input type="tel" name="tel" id="tel" class="input-text">
+            </div>
+            
+            <div class="form-div">
+                <div>задайте вопрос</div> 
+                <div>
+                    <textarea cols="30"></textarea>
+                </div> 
+            </div>
+            <div class="align-center">
+                <input type="submit" value="отправить вопрос" class="input-text">
+            </div>
+            <div id="error" style="color: sienna;"></div>
+            <div id="vivod" style="color:green"></div>
+            
+            
+            
+            <!-- <div id="error" style="color: red;"></div>
+            <div id="vivod" style="color:seagreen;"></div> -->
+            </form>
+        </div>
+        <div class="main-form">
+            <div class="noselect">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quibusdam, sit officia excepturi exercitationem debitis, reprehenderit ipsum quaerat ex maxime assumenda? Expedita tempora vero fuga vel aut temporibus, sunt amet.
+            </div>
+            <div>
+                <img src="../images/str.jpg" alt="">
+            </div>
+        </div>
+        <div class="main-form">
+            <textarea name="" id="textArea" cols="30" rows="10"></textarea><br>
+            <button>Кнопка</button>
+        </div>
+        <div class="main-form"></div>
+        <div class="main-form"></div>
+        <div class="main-form"></div>
+    </div>
+    </main>
+    <footer class="footer">
+        <div>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+       <DIV> Сайт разработан ФИ, Copyright © 2021</DIV>
+    </footer>
+</body>
+</html>
